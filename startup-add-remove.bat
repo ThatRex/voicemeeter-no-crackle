@@ -39,7 +39,6 @@ if errorlevel 3 (
     cd %~dp0
     copy %SCRIPT_NAME% C:\
     schtasks /create /tn %TASK_NAME% /sc onlogon /delay 0000:30 /tr "powershell %ARGUMENTS%" /ru system /rl highest /f
-    echo Task created: %TASK_NAME%
     pause
 
 )
