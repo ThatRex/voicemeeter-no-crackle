@@ -39,7 +39,6 @@ if errorlevel 3 (
 
 ) else if errorlevel 1 (
 
-
     if exist %SCRIPT_LOCATION% (
         del %SCRIPT_LOCATION%
     )
