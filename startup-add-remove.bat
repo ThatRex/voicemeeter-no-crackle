@@ -25,21 +25,23 @@ choice /c 123 /n
 cls
 
 if errorlevel 3 (
+    
     exit
-)
 
-if errorlevel 2 (
+) else if errorlevel 2 (
+
     schtasks /delete /tn %TASK_NAME% /f
     del C:\audiodg-fix.ps1
     pause
-)
 
-if errorlevel 1 (
+) else if errorlevel 1 (
+
     cd %~dp0
     copy %SCRIPT_NAME% C:\
     schtasks /create /tn %TASK_NAME% /sc onlogon /delay 0000:30 /tr "powershell %ARGUMENTS%" /ru system /rl highest /f
     echo Task created: %TASK_NAME%
     pause
+
 )
 
 goto :menu
