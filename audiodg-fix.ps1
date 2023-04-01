@@ -5,10 +5,8 @@ if (-not ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
     exit
 }
 
-# Get the audiodg.exe process
 $Process = Get-Process -Name audiodg
 
-# Check if the process was found
 if ($Process -ne $null) {
     # Set the processor affinity of the process to use only core 1
     $Process.ProcessorAffinity = 1
@@ -16,6 +14,5 @@ if ($Process -ne $null) {
     # Set the priority class of the process to RealTime
     $Process.PriorityClass = [System.Diagnostics.ProcessPriorityClass]::RealTime
 } else {
-    # The process was not found
     Write-Output "Could not find audiodg.exe process"
 }
