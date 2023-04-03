@@ -12,6 +12,10 @@ The script creates a scheduled task that executes a PowerShell script on user lo
 
 # Changelog
 
+## [V1.2] - 03-04-2023
+
+-   Changed: Script location changed from C drive root to ProgramData\voicemeeter-no-crackle
+
 ## [V1.1] - 02-04-2023
 
 -   Removed: Task startup delay
