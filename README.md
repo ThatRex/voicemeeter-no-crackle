@@ -4,7 +4,7 @@ Note: [This is considered a "last effort" fix. Its recommended to try other fixe
 
 The script creates a scheduled task that executes a PowerShell script on user login. That script checks every 5 seconds if the audiodg process is running and sets its processor affinity to `CPU 0` and priority to `High`.
 
-Tested on windows 10 and 11.
+Tested on windows 10 and 11. While the script works I noticed no improvements when using it.
 
 # Usage
 
