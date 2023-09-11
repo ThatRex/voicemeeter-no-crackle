@@ -1,5 +1,7 @@
 # Voicemeeter No Crackle
 
+*Myself and some friends tried this out and it didn't seem to prevent the crackle issues.*
+
 Note: [This is considered a "last effort" fix. Its recommended to try other fixes first.](https://www.reddit.com/r/VoiceMeeter/comments/r5322w/comment/hmkrt0n)
 
 The script creates a scheduled task that executes a PowerShell script on user login. That script checks every 5 seconds if the audiodg process is running and sets its processor affinity to `CPU 0` and priority to `High`.
